@@ -7,7 +7,7 @@
 'use strict';
 
 let appInsights = require("applicationinsights");
-appInsights.setup("InstrumentationKey=fd9a511d-c657-49bb-ad17-55dda7a0a33e;IngestionEndpoint=https://southeastasia-0.in.applicationinsights.azure.com/")
+appInsights.setup("fd9a511d-c657-49bb-ad17-55dda7a0a33e")
     .setAutoDependencyCorrelation(true)
     .setAutoCollectRequests(true)
     .setAutoCollectPerformance(true, true)
