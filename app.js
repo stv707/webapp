@@ -6,19 +6,6 @@
 
 'use strict';
 
-let appInsights = require("applicationinsights");
-appInsights.setup("fd9a511d-c657-49bb-ad17-55dda7a0a33e")
-    .setAutoDependencyCorrelation(true)
-    .setAutoCollectRequests(true)
-    .setAutoCollectPerformance(true, true)
-    .setAutoCollectExceptions(true)
-    .setAutoCollectDependencies(true)
-    .setAutoCollectConsole(true)
-    .setUseDiskRetryCaching(true)
-    .setSendLiveMetrics(true)
-    .setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
-    .start();
-
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
