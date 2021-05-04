@@ -1,0 +1,10 @@
+{
+    "user": "sqladmin",
+    "password": "Pa55w0rd2019",
+    "server": "sqldb707.database.windows.net",
+    "database": "WideWorldImporters-Standard",
+    "port": 1433,
+    "options": {
+        "encrypt": true
+    }
+}
