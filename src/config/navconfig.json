@@ -8,10 +8,6 @@
         "name": "Directory"
     },
     {
-        "url": "/dbsize",
-        "name": "Database Size"
-    },
-    {
         "url": "/tablespacedetail",
         "name": "Table Space Usage"
     },
@@ -22,10 +18,6 @@
     {
         "url": "/servermemorybydb",
         "name": "Memory Usage by Database"
-    },
-    {
-        "url": "/users",
-        "name": "Database Users"
     },
     {
         "url": "/customer",
