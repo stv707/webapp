@@ -6,8 +6,19 @@
 
 'use strict';
 
-const appInsights = require('applicationinsights');
-appInsights.setup('fd9a511d-c657-49bb-ad17-55dda7a0a33e').start();
+let appInsights = require('applicationinsights');
+appInsights.setup('fd9a511d-c657-49bb-ad17-55dda7a0a33e')
+    .setAutoDependencyCorrelation(true)
+    .setAutoCollectRequests(true)
+    .setAutoCollectPerformance(true, true)
+    .setAutoCollectExceptions(true)
+    .setAutoCollectDependencies(true)
+    .setAutoCollectConsole(true)
+    .setUseDiskRetryCaching(true)
+    .setSendLiveMetrics(false)
+    .setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
+    .start();
+
 
 
 const express = require('express');
@@ -31,7 +42,7 @@ pool.connect((err)=>{
   else {
     console.log ('Connected to ' + dbconfig.server 
                     + '/' + dbconfig.database 
-                    + ' (' + dbconfig.user + ')');
+                    + ' (' + dbconfig.user + ')');``
     const request = new mssql.Request(pool);
     request.query('select @@SERVERNAME',(err,rec)=>{
       console.log('SQL RUNNING AT ' +JSON.stringify(rec.recordset, null, 0)
