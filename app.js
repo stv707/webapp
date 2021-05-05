@@ -6,6 +6,10 @@
 
 'use strict';
 
+const appInsights = require('applicationinsights');
+appInsights.setup('fd9a511d-c657-49bb-ad17-55dda7a0a33e').start();
+
+
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
